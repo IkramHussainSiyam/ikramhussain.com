@@ -1,8 +1,7 @@
 import { Menu as Menubar } from "lucide-react";
 import type { INavLink } from "~/types";
-import Container from "../common/container";
 import Logo from "../common/Logo";
-import { NavbarSheet } from "../common/navbarsheet";
+import { NavbarSheet } from "./navbarsheet";
 
 export default function Navbar() {
   const navlinks: INavLink[] = [

@@ -1,4 +1,5 @@
 import HeroSection from "~/components/sections/hero/HeroSection";
+import SkillSection from "~/components/sections/skill/SkillSection";
 import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <SkillSection />
     </>
   );
 }

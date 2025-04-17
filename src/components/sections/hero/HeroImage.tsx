@@ -17,7 +17,7 @@ export default function HeroImage() {
         },
       }}
       src="/Me with headphone original.jpg"
-      className="size-44 sm:size-16 sm:rounded-lg md:size-[100px] lg:size-28 md:rounded-3xl object-cover absolute top-0 -right-[9.2rem] sm:-top-8 sm:-right-10 md:-top-9 md:-right-[4.5rem] lg:-top-12 lg:-right-24 shadow-2xl rounded-[2rem]"
+      className="size-40 sm:size-14 sm:rounded-lg md:size-[100px] lg:size-28 md:rounded-3xl object-cover absolute top-0 -right-[7.5rem] sm:-top-8 sm:-right-5 md:-top-9 md:-right-[4.5rem] lg:-top-12 lg:-right-24 shadow-2xl rounded-[2rem]"
     ></motion.img>
   );
 }

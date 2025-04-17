@@ -16,9 +16,9 @@ export default function HeroActions() {
           stiffness: 400,
         },
       }}
-      className="flex items-center gap-5 sm:gap-3"
+      className="flex items-center gap-5 sm:gap-3 ml-4 sm:ml-0 lg:ml-0"
     >
-      <FancyButton className="text-2xl px-12 py-9 ml-0 2xl:ml-4 sm:px-6 sm:py-4 sm:text-sm">
+      <FancyButton className="text-2xl px-12 py-9 sm:px-6 sm:py-4 sm:text-sm">
         Download CV
       </FancyButton>
     </motion.div>

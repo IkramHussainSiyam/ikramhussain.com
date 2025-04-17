@@ -5,7 +5,7 @@ export default function AboutMe() {
     <TextReveal
       per="char"
       preset="blur"
-      className="text-2xl lg:text-xl md:text-lg sm:text-sm text-primary/80 2xl:ml-4 ml-0 mt-12 mb-8 sm:mb-6 lg:mt-16"
+      className="text-2xl lg:text-xl md:text-lg sm:text-sm text-primary/80 mt-12 ml-4 sm:ml-0 lg:ml-0 mb-8 sm:mb-6 lg:mt-16"
       speedReveal={15}
     >
       I specialize in developing interactive and scalable web applications using
