@@ -1,0 +1,36 @@
+.wavy-rotation {
+  -webkit-animation: wavy-rotation var(--dur, 0.65s) linear both
+    var(--wait, 0.3s) 2;
+  animation: wavy-rotation var(--dur, 0.65s) linear both var(--wait, 0.3s) 2;
+  transform-origin: bottom center;
+}
+
+@-webkit-keyframes wavy-rotation {
+  0% {
+    -webkit-transform: rotateZ(0) translate(0, 0);
+    transform: rotateZ(0) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: rotateZ(22deg) translateY(-5px);
+    transform: rotateZ(22deg) translateY(-5px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0) translate(0, 0);
+    transform: rotateZ(0) translate(0, 0);
+  }
+}
+
+@keyframes wavy-rotation {
+  0% {
+    -webkit-transform: rotateZ(0) translate(0, 0);
+    transform: rotateZ(0) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: rotateZ(22deg) translateY(-5px);
+    transform: rotateZ(22deg) translateY(-5px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0) translate(0, 0);
+    transform: rotateZ(0) translate(0, 0);
+  }
+}

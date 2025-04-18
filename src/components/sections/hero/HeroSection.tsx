@@ -1,3 +1,4 @@
+import Section from "~/components/common/section";
 import AboutMe from "./AboutMe";
 import Greetings from "./Greetings";
 import HeroActions from "./HeroActions";
@@ -6,14 +7,12 @@ import Slogan from "./Slogan";
 
 export default function HeroSection() {
   return (
-    <div className="my-36 sm:my-20">
-      <div className="relative">
-        <Greetings />
-        <HeroTitle />
-        <Slogan />
-      </div>
+    <Section>
+      <Greetings />
+      <HeroTitle />
+      <Slogan />
       <AboutMe />
       <HeroActions />
-    </div>
+    </Section>
   );
 }

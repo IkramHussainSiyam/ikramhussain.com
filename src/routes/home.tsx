@@ -4,7 +4,7 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Ikram Hussain - Software Engineer" },
+    { title: "Ikram Hussain - Software Developer" },
     {
       name: "description",
       content:

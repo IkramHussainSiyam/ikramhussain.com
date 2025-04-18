@@ -1,0 +1,31 @@
+.tilt-in-bottom-2 {
+  -webkit-animation: tilt-in-bottom-2 var(--dur, 0.2s)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both var(--wait, 0s);
+  animation: tilt-in-bottom-2 var(--dur, 0.2s)
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both var(--wait, 0s);
+}
+
+@-webkit-keyframes tilt-in-bottom-2 {
+  0% {
+    -webkit-transform: rotateY(-30deg) translateY(50px) skewY(30deg);
+    transform: rotateY(-30deg) translateY(50px) skewY(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-bottom-2 {
+  0% {
+    -webkit-transform: rotateY(-30deg) translateY(50px) skewY(30deg);
+    transform: rotateY(-30deg) translateY(50px) skewY(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}

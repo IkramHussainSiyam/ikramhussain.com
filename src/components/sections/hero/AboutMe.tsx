@@ -1,17 +1,12 @@
-import { TextReveal } from "~/components/ui/text-reveal";
+import "~/motion/focus-in.css";
 
 export default function AboutMe() {
   return (
-    <TextReveal
-      per="char"
-      preset="blur"
-      className="text-2xl lg:text-xl md:text-lg sm:text-sm text-primary/80 mt-12 ml-4 sm:ml-0 lg:ml-0 mb-8 sm:mb-6 lg:mt-16"
-      speedReveal={15}
-    >
+    <p className="text-2xl lg:text-xl md:text-lg sm:text-sm text-primary ml-3 my-9 text-focus-in [--wait:0.8s]">
       I specialize in developing interactive and scalable web applications using
       modern JavaScript frameworks, with a particular focus on Tailwind CSS and
       React. My expertise allows me to create contemporary, user-friendly
       interfaces that elevate user experiences.
-    </TextReveal>
+    </p>
   );
 }

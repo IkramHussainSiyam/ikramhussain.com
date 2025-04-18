@@ -1,22 +1,18 @@
-import { motion } from "motion/react";
-import { TextScramble } from "~/components/ui/text-scramble";
-import HeroImage from "./HeroImage";
+"use client";
+import UseTextScramble from "~/hooks/useTextScramble";
+import "~/motion/fade-in.css";
 
 export default function HeroTitle() {
+  const textRef = UseTextScramble<HTMLHeadingElement>();
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 1 } }}
-      className="inline-block max-w-full whitespace-nowrap relative"
-    >
-      <TextScramble
-        as={"h1"}
-        duration={1}
-        className="uppercase font-semibold tracking-[-0.055em] text-foreground text-[14rem] lg:text-[5rem] md:text-[5.5rem] sm:text-[2.7rem] sm:font-bold"
+    <h1 className="whitespace-nowrap relative fade-in-bck">
+      <span
+        ref={textRef}
+        className="block uppercase font-semibold tracking-[-0.055em] text-foreground leading-[1] text-[14rem]"
       >
         ikram hussain
-      </TextScramble>
-      <HeroImage />
-    </motion.div>
+      </span>
+    </h1>
   );
 }

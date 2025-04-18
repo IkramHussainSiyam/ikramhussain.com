@@ -1,0 +1,13 @@
+@layer components {
+  .styled-border {
+    @apply border-muted-foreground/20 border-dashed;
+  }
+  .position-screen-center {
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .noise-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/noise.svg");
+  }
+}

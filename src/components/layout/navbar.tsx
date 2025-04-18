@@ -12,13 +12,8 @@ export default function Navbar() {
     },
     {
       id: 2,
-      name: "Projects",
-      href: "#projects",
-    },
-    {
-      id: 3,
-      name: "About",
-      href: "#about",
+      name: "Skills",
+      href: "#skills",
     },
   ];
 

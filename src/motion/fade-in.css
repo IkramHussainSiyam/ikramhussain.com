@@ -1,0 +1,31 @@
+.fade-in-bck {
+  -webkit-animation: fade-in-bck 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both
+    var(--wait, 0.2s);
+  animation: fade-in-bck 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both
+    var(--wait, 0.2s);
+}
+
+@-webkit-keyframes fade-in-bck {
+  0% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bck {
+  0% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
