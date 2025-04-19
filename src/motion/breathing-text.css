@@ -1,0 +1,27 @@
+.breathing-text {
+  -webkit-animation: breathing-text var(--dur, 5s) ease-in-out infinite
+    var(--wait, 0s);
+  animation: breathing-text var(--dur, 5s) ease-in-out infinite var(--wait, 0s);
+}
+
+@-webkit-keyframes breathing-text {
+  0%,
+  100% {
+    font-variation-settings: "wght" var(--wght, 400);
+  }
+
+  50% {
+    font-variation-settings: "wght" var(--wght, 600);
+  }
+}
+
+@keyframes breathing-text {
+  0%,
+  100% {
+    font-variation-settings: "wght" var(--wght, 400);
+  }
+
+  50% {
+    font-variation-settings: "wght" var(--wght, 600);
+  }
+}

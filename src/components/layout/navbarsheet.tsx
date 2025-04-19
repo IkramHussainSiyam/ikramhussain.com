@@ -22,10 +22,12 @@ export function NavbarSheet({
       <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent
         closeBtn={false}
-        className="p-0 border rounded-xl sm:w-[calc(100%-24px)]"
+        className="p-0 rounded-xl sm:w-[calc(100%-24px)]"
       >
-        <div className="flex items-center justify-between px-5 py-2.5 border-b">
-          <SheetTitle className="uppercase text-base">menu</SheetTitle>
+        <div className="flex items-center justify-between px-5 py-2.5 border-b border-border/20">
+          <SheetTitle className="uppercase text-base text-primary">
+            menu
+          </SheetTitle>
           <SheetClose>
             <X size={16} className="text-muted-foreground" />
           </SheetClose>
@@ -35,7 +37,7 @@ export function NavbarSheet({
             {navlinks?.map((link) => (
               <li
                 key={link.id}
-                className="hover:text-[#3e8855] dark:hover:text-[#3e8855] text-2xl"
+                className="text-primary hover:text-primary/70 text-2xl"
               >
                 <Link to={link.href}>
                   <SheetClose>{link.name}</SheetClose>

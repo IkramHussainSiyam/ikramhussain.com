@@ -1,18 +1,24 @@
 "use client";
-import UseTextScramble from "~/hooks/useTextScramble";
+import Heading from "~/components/common/Heading";
+import useTextScramble from "~/hooks/useTextScramble";
+import "~/motion/breathing-text.css";
 import "~/motion/fade-in.css";
 
 export default function HeroTitle() {
-  const textRef = UseTextScramble<HTMLHeadingElement>();
+  const textRef = useTextScramble<HTMLHeadingElement>();
 
   return (
-    <h1 className="whitespace-nowrap relative fade-in-bck">
-      <span
-        ref={textRef}
-        className="block uppercase font-semibold tracking-[-0.055em] text-foreground leading-[1] text-[14rem]"
-      >
-        ikram hussain
-      </span>
-    </h1>
+    <Heading
+      font="heading"
+      size="h1"
+      asChild
+      className="mt-14 mb-7 whitespace-nowrap fade-in-bck tracking-tight"
+    >
+      <h1>
+        <span ref={textRef} className="breathing-text [--wait:1s]">
+          IKRam HuSSaiN
+        </span>
+      </h1>
+    </Heading>
   );
 }

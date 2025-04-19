@@ -46,11 +46,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <Container>
+    <>
       <BorderedBackground />
       <Navbar />
-      <Outlet />
-    </Container>
+      <Container>
+        <Outlet />
+      </Container>
+    </>
   );
 }
 

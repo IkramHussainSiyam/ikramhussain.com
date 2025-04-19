@@ -1,56 +1,40 @@
-import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "~/lib/utils";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
-      size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  }
-);
-
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  indicatorClassName?: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+  ({ className, indicatorClassName, children, ...props }, ref) => {
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+      <button
+        className={cn(
+          "h-9 w-20 font-semibold uppercase transition-all relative bg-primary text-primary-foreground group/btn",
+          className
+        )}
         ref={ref}
         {...props}
-      />
+      >
+        <div
+          className={cn(
+            "before:absolute before:-top-1 before:-left-1 before:border-t-2 before:border-l-2 before:border-border before:w-3 before:h-3 after:absolute after:rotate-180 after:-bottom-1 after:-right-1 after:border-t-2 after:border-l-2 after:border-border after:w-3 after:h-3 group-hover/btn:before:-top-1.5 group-hover/btn:before:-left-1.5 group-hover/btn:after:-bottom-1.5 group-hover/btn:after:-right-1.5 before:transition-all after:transition-all",
+            indicatorClassName
+          )}
+        />
+        {children}
+        <div
+          className={cn(
+            "before:absolute before:-bottom-1 before:-left-1 before:-rotate-90 before:border-t-2 before:border-l-2 before:border-border before:w-3 before:h-3 after:absolute after:rotate-90 after:-top-1 after:-right-1 after:border-t-2 after:border-l-2 after:border-border after:w-3 after:h-3 group-hover/btn:before:-bottom-1.5 group-hover/btn:before:-left-1.5 group-hover/btn:after:-top-1.5 group-hover/btn:after:-right-1.5 before:transition-all after:transition-all",
+            indicatorClassName
+          )}
+        />
+      </button>
     );
   }
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export default Button;

@@ -16,7 +16,7 @@ export default function Greetings() {
   }, []);
 
   return (
-    <h4 className="text-5xl flex items-center gap-2 mb-3">
+    <h4 className="text-5xl flex items-center gap-2 text-primary">
       <span className={`inline-block ${animating ? "wavy-rotation" : ""}`}>
         👋
       </span>

@@ -2,7 +2,7 @@ import SkillsGroupItem from "./SkillsGroupItem";
 
 export default function SkillsGroups() {
   return (
-    <div className="my-28">
+    <div className="my-28 section-padding">
       <SkillsGroupItem />
     </div>
   );

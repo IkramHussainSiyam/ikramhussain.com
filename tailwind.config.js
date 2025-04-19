@@ -13,8 +13,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Ubuntu Sans", "sans-serif"],
+        heading: ["TFMixVF", "sans-serif"],
         display: ["Instrument Serif", "serif"],
+        body: ["Ubuntu Sans", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
