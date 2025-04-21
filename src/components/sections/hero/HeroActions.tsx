@@ -7,7 +7,7 @@ export default function HeroActions() {
 
   return (
     <div className="slide-in-blurred-top ml-3">
-      <Button className="text-xl w-56 h-12">
+      <Button className="text-xl w-56 h-14">
         <span ref={textRef}>Grab My Resume</span>
       </Button>
     </div>

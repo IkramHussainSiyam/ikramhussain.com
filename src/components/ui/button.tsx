@@ -1,36 +1,46 @@
+import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "~/lib/utils";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
   indicatorClassName?: string;
 }
 
+const buttonVariants = cva(
+  "bg-primary text-primary-foreground uppercase font-medium border-[3px] border-primary-foreground shadow-[7px_7px_0] shadow-secondary/60 transition-all ease-out duration-100 relative flex items-center justify-center active:translate-x-1 active:translate-y-1 active:shadow-none",
+  {
+    variants: {
+      variant: {
+        default: "text-primary-foreground bg-primary",
+        secondary: "bg-background text-primary shadow-primary-foreground/30 border-primary",
+      },
+      size: {
+        default: "h-10 w-20 text-base",
+        icon: "h-8 w-8 shadow-[4px_4px_0]",
+      },
+    },
+    defaultVariants: {
+      size: "default",
+      variant: "default",
+    },
+  }
+);
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, indicatorClassName, children, ...props }, ref) => {
+  (
+    { className, size, variant, indicatorClassName, children, ...props },
+    ref
+  ) => {
     return (
       <button
-        className={cn(
-          "h-9 w-20 font-semibold uppercase transition-all relative bg-primary text-primary-foreground group/btn",
-          className
-        )}
+        className={cn(buttonVariants({ size, variant }), className)}
         ref={ref}
         {...props}
       >
-        <div
-          className={cn(
-            "before:absolute before:-top-1 before:-left-1 before:border-t-2 before:border-l-2 before:border-border before:w-3 before:h-3 after:absolute after:rotate-180 after:-bottom-1 after:-right-1 after:border-t-2 after:border-l-2 after:border-border after:w-3 after:h-3 group-hover/btn:before:-top-1.5 group-hover/btn:before:-left-1.5 group-hover/btn:after:-bottom-1.5 group-hover/btn:after:-right-1.5 before:transition-all after:transition-all",
-            indicatorClassName
-          )}
-        />
         {children}
-        <div
-          className={cn(
-            "before:absolute before:-bottom-1 before:-left-1 before:-rotate-90 before:border-t-2 before:border-l-2 before:border-border before:w-3 before:h-3 after:absolute after:rotate-90 after:-top-1 after:-right-1 after:border-t-2 after:border-l-2 after:border-border after:w-3 after:h-3 group-hover/btn:before:-bottom-1.5 group-hover/btn:before:-left-1.5 group-hover/btn:after:-top-1.5 group-hover/btn:after:-right-1.5 before:transition-all after:transition-all",
-            indicatorClassName
-          )}
-        />
       </button>
     );
   }

@@ -7,3 +7,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const twc = createTwc({ compose: cn });
+
+const jsonModules = import.meta.glob("./data/*.json");

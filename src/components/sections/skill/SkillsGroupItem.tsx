@@ -1,20 +1,27 @@
 import Skill from "./Skill";
 
-export default function SkillsGroupItem() {
+export default function SkillsGroupItem({
+  skills,
+  groupHeading,
+}: {
+  skills: string[];
+  groupHeading: [string, number];
+}) {
   return (
-    <div className="w-[calc(50%-5rem)]">
+    <div>
       <div className="flex items-center justify-between">
-        <h4 className="uppercase font-semibold text-3xl text-primary">languages</h4>
+        <h4 className="uppercase font-semibold text-3xl text-primary">
+          {groupHeading[0]}
+        </h4>
         <span className="font-semibold font-display italic tracking-widest text-lg text-primary/80">
-          01
+          0{groupHeading[1]}
         </span>
       </div>
 
       <div className="my-7 grid grid-cols-2 gap-x-12 gap-y-4">
-        <Skill name="html" />
-        <Skill name="css" />
-        <Skill name="javascript" />
-        <Skill name="typescript" />
+        {skills.map((skill) => (
+          <Skill key={skill} name={skill} />
+        ))}
       </div>
     </div>
   );

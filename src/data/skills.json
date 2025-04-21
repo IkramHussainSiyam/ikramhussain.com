@@ -1,0 +1,30 @@
+{
+  "skills": [
+    {
+      "groupHeading": "languages",
+      "groupSerial": 1,
+      "skills": ["html", "css", "javascript", "typescript"]
+    },
+    {
+      "groupHeading": "frameworks & libraries",
+      "groupSerial": 1,
+      "skills": [
+        "react.js",
+        "next.js",
+        "redux.js",
+        "react router",
+        "tailwindcss"
+      ]
+    },
+    {
+      "groupHeading": "Database & Auth",
+      "groupSerial": 1,
+      "skills": ["mongodb", "prisma", "firebase", "auth.js"]
+    },
+    {
+      "groupHeading": "familiar with",
+      "groupSerial": 1,
+      "skills": ["svelte", "solid.js", "figma", "adobe xd"]
+    }
+  ]
+}

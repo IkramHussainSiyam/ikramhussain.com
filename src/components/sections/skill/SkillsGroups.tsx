@@ -1,9 +1,20 @@
 import SkillsGroupItem from "./SkillsGroupItem";
 
-export default function SkillsGroups() {
+interface ISKillGroupInfo {
+  groupHeading: string;
+  groupSerial: number;
+  skills: string[];
+}
+
+export default function SkillsGroups({
+  groupInfo,
+}: {
+  groupInfo: ISKillGroupInfo;
+}) {
   return (
-    <div className="my-28 section-padding">
-      <SkillsGroupItem />
-    </div>
+    <SkillsGroupItem
+      groupHeading={[groupInfo.groupHeading, groupInfo.groupSerial]}
+      skills={groupInfo.skills}
+    />
   );
 }

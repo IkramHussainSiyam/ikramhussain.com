@@ -11,7 +11,8 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import Container from "./components/common/container";
 import BorderedBackground from "./components/layout/bordered-background";
-import Navbar from "./components/layout/navbar";
+import Navbar from "./components/layout/navigation/navbar";
+import FireflyCanvas from "./components/layout/universe-bg";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -22,7 +23,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Instrument+Serif:ital@0;1&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap",
   },
 ];
 
@@ -47,6 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
+      <FireflyCanvas starColor="hsla(86, 71%, 19%, 0.25)" />
       <BorderedBackground />
       <Navbar />
       <Container>

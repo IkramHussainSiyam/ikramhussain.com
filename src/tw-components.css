@@ -8,6 +8,6 @@
     background-image: url("/noise.svg");
   }
   .section-padding {
-    @apply px-3;
+    @apply px-4;
   }
 }
