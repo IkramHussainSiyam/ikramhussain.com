@@ -3,17 +3,9 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: {
-      // Desktop-first (max-width down with exclusive min-max)
-      "2xl": { min: "1281px", max: "1536px" },
-      xl: { min: "1025px", max: "1280px" },
-      lg: { min: "769px", max: "1024px" },
-      md: { min: "641px", max: "768px" },
-      sm: { max: "640px" },
-    },
     extend: {
       fontFamily: {
-        heading: ["TFMixVF", "sans-serif"],
+        heading: ["Limelight", "sans-serif"],
         display: ["Instrument Serif", "serif"],
         body: ["Ubuntu Sans", "sans-serif"],
       },

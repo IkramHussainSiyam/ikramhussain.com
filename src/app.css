@@ -8,7 +8,7 @@
   src: url("/TFMixVF.woff2") format("woff2");
 }
 
-@layer base {   
+@layer base {
   :root {
     --background: 0, 0%, 99%;
     --foreground: 240 10% 3.9%;

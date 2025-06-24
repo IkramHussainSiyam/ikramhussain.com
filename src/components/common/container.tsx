@@ -1,5 +1,5 @@
 import { twc } from "~/lib/utils";
 
-const Container = twc.div`mx-24 lg:mx-12 md:mx-8 sm:mx-4`;
+const Container = twc.div`mx-24`; // TODO: add md, sm, lg sizes
 
 export default Container;

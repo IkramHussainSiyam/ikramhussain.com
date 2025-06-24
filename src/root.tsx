@@ -23,7 +23,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Limelight&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap",
   },
 ];
 
@@ -48,6 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
+      {/* TODO: change it */}
       <FireflyCanvas starColor="hsla(86, 71%, 19%, 0.25)" />
       <BorderedBackground />
       <Navbar />

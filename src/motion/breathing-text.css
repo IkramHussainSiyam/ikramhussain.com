@@ -7,21 +7,21 @@
 @-webkit-keyframes breathing-text {
   0%,
   100% {
-    font-variation-settings: "wght" var(--wght, 400);
+    letter-spacing: normal;
   }
 
   50% {
-    font-variation-settings: "wght" var(--wght, 600);
+    letter-spacing: 0.35rem;
   }
 }
 
 @keyframes breathing-text {
   0%,
   100% {
-    font-variation-settings: "wght" var(--wght, 400);
+    letter-spacing: normal;
   }
 
   50% {
-    font-variation-settings: "wght" var(--wght, 600);
+    letter-spacing: 0.35rem;
   }
 }
