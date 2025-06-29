@@ -9,10 +9,9 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import Container from "./components/common/container";
-import BorderedBackground from "./components/layout/bordered-background";
+import Particles from "./components/common/Particles";
+import { BorderedBackground } from "./components/layout/bordered-background";
 import Navbar from "./components/layout/navigation/navbar";
-import FireflyCanvas from "./components/layout/universe-bg";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,7 +24,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Limelight&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap",
   },
+  { rel: "canonical", href: "https://ikramhussainsiyam.vercel.app/" },
 ];
+
+// https://ikramhussainsiyam.vercel.app
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -44,17 +46,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
+// TODO: add loading screen
 export default function App() {
   return (
     <>
-      {/* TODO: change it */}
-      <FireflyCanvas starColor="hsla(86, 71%, 19%, 0.25)" />
-      <BorderedBackground />
       <Navbar />
-      <Container>
-        <Outlet />
-      </Container>
+      <Outlet />
+      <Particles
+        particlesColor="hsla(86, 71%, 19%, 0.5)"
+        particlesCount={100}
+      />
+      <BorderedBackground />
     </>
   );
 }

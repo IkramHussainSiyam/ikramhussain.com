@@ -6,10 +6,18 @@ export default function HeroActions() {
   const textRef = useTextScramble<HTMLButtonElement>({ hover: true, speed: 1 });
 
   return (
-    <div className="slide-in-blurred-top ml-3">
-      <Button className="text-xl w-56 h-14">
+    <Button
+      asChild
+      className="flex slide-in-blurred-top text-xs w-36 h-10 sm:text-xl sm:w-56 sm:h-14"
+    >
+      <a
+        href="/assets/Ikram_Hussain_Siaym_Resume.pdf"
+        download
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <span ref={textRef}>Grab My Resume</span>
-      </Button>
-    </div>
+      </a>
+    </Button>
   );
 }

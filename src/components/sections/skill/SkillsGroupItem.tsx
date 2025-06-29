@@ -8,9 +8,9 @@ export default function SkillsGroupItem({
   groupHeading: [string, number];
 }) {
   return (
-    <div>
+    <article className="section-padding-x ">
       <div className="flex items-center justify-between">
-        <h4 className="uppercase font-semibold text-3xl text-primary">
+        <h4 className="uppercase font-semibold text-xl md:text-3xl text-primary">
           {groupHeading[0]}
         </h4>
         <span className="font-semibold font-display italic tracking-widest text-lg text-primary/80">
@@ -23,6 +23,6 @@ export default function SkillsGroupItem({
           <Skill key={skill} name={skill} />
         ))}
       </div>
-    </div>
+    </article>
   );
 }

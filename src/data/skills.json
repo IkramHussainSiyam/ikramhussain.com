@@ -7,24 +7,18 @@
     },
     {
       "groupHeading": "frameworks & libraries",
-      "groupSerial": 1,
-      "skills": [
-        "react.js",
-        "next.js",
-        "redux.js",
-        "react router",
-        "tailwindcss"
-      ]
+      "groupSerial": 2,
+      "skills": ["react.js", "next.js", "redux.js", "tailwindcss"]
     },
     {
       "groupHeading": "Database & Auth",
-      "groupSerial": 1,
-      "skills": ["mongodb", "prisma", "firebase", "auth.js"]
+      "groupSerial": 3,
+      "skills": ["mongodb", "prisma", "firebase", "better auth"]
     },
     {
       "groupHeading": "familiar with",
-      "groupSerial": 1,
-      "skills": ["svelte", "solid.js", "figma", "adobe xd"]
+      "groupSerial": 4,
+      "skills": ["react router", "zustand", "svelte", "solid.js"]
     }
   ]
 }

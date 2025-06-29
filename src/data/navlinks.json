@@ -12,23 +12,13 @@
     },
     {
       "id": 3,
-      "name": "My Works",
-      "href": "#my_works"
-    },
-    {
-      "id": 4,
-      "name": "Awards",
-      "href": "#awards"
-    },
-    {
-      "id": 5,
-      "name": "Blogs",
-      "href": "#blogs"
+      "name": "Projects",
+      "href": "#projects"
     },
     {
       "id": 6,
       "name": "Find Me",
-      "href": "#find_me"
+      "href": "#contact"
     }
   ]
 }

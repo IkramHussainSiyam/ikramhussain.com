@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { MdWavingHand } from "react-icons/md";
+import { cn } from "~/lib/utils";
 import "~/motion/tilt-in.css";
 import "~/motion/wavy-rotation.css";
 
@@ -16,11 +18,9 @@ export default function Greetings() {
   }, []);
 
   return (
-    <h4 className="text-5xl flex items-center gap-4 text-primary">
-      <span
-        className={`inline-block text-4xl ${animating ? "wavy-rotation" : ""}`}
-      >
-        👋
+    <h3 className="text-2xl md:text-5xl flex items-center gap-3 md:gap-6">
+      <span className={cn("inline-block", animating && "wavy-rotation")}>
+        <MdWavingHand className="-rotate-90 text-2xl md:text-5xl" />
       </span>
       <span>
         {greetings.split("").map((char, index) => (
@@ -33,6 +33,6 @@ export default function Greetings() {
           </span>
         ))}
       </span>
-    </h4>
+    </h3>
   );
 }

@@ -40,7 +40,7 @@ export default function Navbar() {
       <Container
         asChild
         className={cn(
-          navStatus === "show" && "section-padding",
+          navStatus === "show" && "px-2 sm:section-padding-x",
           navStatus === "style" && "mx-6"
         )}
       >

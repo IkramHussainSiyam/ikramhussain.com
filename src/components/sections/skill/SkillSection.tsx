@@ -1,4 +1,5 @@
 import Section from "~/components/common/section";
+import { SectionBorderBG } from "~/components/layout/bordered-background";
 import useJsonData from "~/hooks/useJsonData";
 import "~/motion/breathing-text.css";
 import { type ISkillGroupData } from "~/types/data";
@@ -9,11 +10,12 @@ export default function SkillSection() {
 
   return (
     <Section id="skills" sectionTitle="skills">
-      <div className="my-32 section-padding grid grid-cols-2 gap-x-[calc(150px+32px)] gap-y-14">
+      <article className="relative section-padding-y grid grid-cols-1 2xl:grid-cols-2 2xl:gap-x-[calc(150px+32px)] gap-y-8 2xl:gap-y-14">
         {skills.map((groupInfo) => (
-          <SkillsGroups groupInfo={groupInfo} />
+          <SkillsGroups key={groupInfo.groupHeading} groupInfo={groupInfo} />
         ))}
-      </div>
+        <SectionBorderBG />
+      </article>
     </Section>
   );
 }

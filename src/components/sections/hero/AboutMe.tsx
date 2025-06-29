@@ -2,11 +2,10 @@ import "~/motion/focus-in.css";
 
 export default function AboutMe() {
   return (
-    <p className="text-2xl text-primary ml-3 mb-10 text-focus-in [--wait:0.8s]">
-      I specialize in developing interactive and scalable web applications using
-      modern JavaScript frameworks, with a particular focus on Tailwind CSS and
-      React. My expertise allows me to create contemporary, user-friendly
-      interfaces that elevate user experiences.
+    <p className="text-sm md:text-2xl my-4 md:my-7 lg:my-7 text-focus-in [--wait:0.8s]">
+      Committed to developing modern software solutions using modern JavaScript
+      frameworks with a particular focus on React.js. From interactive frontend
+      UIs to full-stack applications that elevate user experiences.
     </p>
   );
 }

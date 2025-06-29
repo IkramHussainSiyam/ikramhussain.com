@@ -10,12 +10,11 @@ interface ISectionProps extends React.HTMLAttributes<HTMLDivElement> {
 const Section = React.forwardRef<HTMLDivElement, ISectionProps>(
   ({ children, className, titleClassName, sectionTitle, ...props }, ref) => {
     return (
-      <section ref={ref} {...props} className={cn("my-36", className)}>
-        {/* section title */}
+      <section ref={ref} {...props} className={cn(className)}>
         {sectionTitle && (
           <h2
             className={cn(
-              "pt-8 pb-4 border-y uppercase border-border/15 text-8xl font-heading text-center breathing-text text-primary",
+              "pt-6 pb-4 border-y uppercase border-border/15 text-5xl md:text-8xl font-heading text-center breathing-text text-primary",
               titleClassName
             )}
           >

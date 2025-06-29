@@ -44,7 +44,6 @@ export default function useTextScramble<T extends HTMLElement>(
       }, speed);
     };
 
-    // Add hover listener conditionally
     if (hover) {
       const target = textElement.parentElement || textElement;
       const handleHover = () => runScramble();
@@ -65,4 +64,3 @@ export default function useTextScramble<T extends HTMLElement>(
 
   return textRef;
 }
-

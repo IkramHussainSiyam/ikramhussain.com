@@ -1,7 +1,7 @@
 .breathing-text {
   -webkit-animation: breathing-text var(--dur, 5s) ease-in-out infinite
     var(--wait, 0s);
-  animation: breathing-text var(--dur, 5s) ease-in-out infinite var(--wait, 0s);
+  animation: breathing-text var(--dur, 3s) ease-in-out infinite var(--wait, 0s);
 }
 
 @-webkit-keyframes breathing-text {
@@ -11,7 +11,7 @@
   }
 
   50% {
-    letter-spacing: 0.35rem;
+    letter-spacing: 0.15rem;
   }
 }
 
@@ -22,6 +22,6 @@
   }
 
   50% {
-    letter-spacing: 0.35rem;
+    letter-spacing: 0.15rem;
   }
 }

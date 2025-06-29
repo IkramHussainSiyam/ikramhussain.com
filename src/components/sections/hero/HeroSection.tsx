@@ -7,12 +7,14 @@ import Slogan from "./Slogan";
 
 export default function HeroSection() {
   return (
-    <Section className="section-padding">
-      <Greetings />
-      <HeroTitle />
-      <Slogan />
-      <AboutMe />
-      <HeroActions />
-    </Section>
+    <main className="section-padding-x section-padding-y">
+      <Section>
+        <Greetings />
+        <HeroTitle />
+        <Slogan />
+        <AboutMe />
+        <HeroActions />
+      </Section>
+    </main>
   );
 }

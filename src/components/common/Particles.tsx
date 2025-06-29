@@ -1,23 +1,43 @@
 import { useEffect, useRef } from "react";
 
-const FireflyCanvas = ({
-  starColor = "#ff00ff",
-  starCount = 2000,
+type Firefly = {
+  x: number;
+  y: number;
+  s: number;
+  ang: number;
+  v: number;
+  move: () => void;
+  show: () => void;
+};
+
+const Particles = ({
+  particlesColor = "#ff00ff",
+  particlesCount = 2000,
 }: {
-  starColor?: string;
-  starCount?: number;
+  particlesColor?: string;
+  particlesCount?: number;
 }) => {
-  const canvasRef = useRef(null);
-  const fireflies = useRef([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const fireflies = useRef<Firefly[]>([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas?.getContext("2d");
 
-    let w = (canvas.width = window.innerWidth);
-    let h = (canvas.height = window.innerHeight);
+    let w: number, h: number;
+
+    if (canvas) {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
 
     class Firefly {
+      x: number;
+      y: number;
+      s: number;
+      ang: number;
+      v: number;
+
       constructor() {
         this.x = Math.random() * w;
         this.y = Math.random() * h;
@@ -33,15 +53,15 @@ const FireflyCanvas = ({
       }
 
       show() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
-        ctx.fillStyle = starColor;
-        ctx.fill();
+        ctx?.beginPath();
+        ctx?.arc(this.x, this.y, this.s, 0, 2 * Math.PI);
+        if (ctx) ctx.fillStyle = particlesColor;
+        ctx?.fill();
       }
     }
 
     const draw = () => {
-      if (fireflies.current.length < starCount) {
+      if (fireflies.current.length < particlesCount) {
         for (let j = 0; j < 10; j++) {
           fireflies.current.push(new Firefly());
         }
@@ -58,15 +78,17 @@ const FireflyCanvas = ({
     };
 
     const loop = () => {
-      ctx.clearRect(0, 0, w, h);
+      ctx?.clearRect(0, 0, w, h);
       draw();
       requestAnimationFrame(loop);
     };
 
     const handleResize = () => {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      ctx.fillRect(0, 0, w, h);
+      if (canvas) {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      ctx?.fillRect(0, 0, w, h);
     };
 
     // Initial setup
@@ -82,9 +104,9 @@ const FireflyCanvas = ({
   return (
     <canvas
       ref={canvasRef}
-      className="bg-transparent fixed top-0 left-0 mix-blend-overlay pointer-events-none -z-[999999]"
+      className="fixed inset-0 pointer-events-none -z-[999999]"
     />
   );
 };
 
-export default FireflyCanvas;
+export default Particles;
