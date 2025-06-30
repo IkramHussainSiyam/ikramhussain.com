@@ -1,11 +1,11 @@
 import type { Route } from "../routes/+types/home";
 
 export const seoMetadata: Route.MetaDescriptors = [
-  { title: "Ikram Hussain - Software Developer" },
+  { title: "Ikram Hussain - Frontend Web Developer" },
   {
     name: "description",
     content:
-      "Passionate for developing modern software solutions using modern JavaScript frameworks with a particular focus on React.js. From interactive frontend UIs to full-stack applications that elevate user experiences.",
+      "Committed to developing modern software solutions using modern JavaScript frameworks with a particular focus on React.js. From interactive frontend UIs to full-stack applications that elevate user experiences.",
   },
   { name: "robots", content: "index, follow" },
   {
@@ -16,12 +16,12 @@ export const seoMetadata: Route.MetaDescriptors = [
   { name: "og:type", content: "website" },
   {
     name: "og:title",
-    content: "Ikram Hussain - Software Developer",
+    content: "Ikram Hussain - Frontend Web Developer",
   },
   {
     name: "og:description",
     content:
-      "Passionate for developing modern software solutions using modern JavaScript frameworks with a particular focus on React.js. From interactive frontend UIs to full-stack applications that elevate user experiences.",
+      "Committed to developing modern software solutions using modern JavaScript frameworks with a particular focus on React.js. From interactive frontend UIs to full-stack applications that elevate user experiences.",
   },
   {
     name: "og:url",
@@ -29,6 +29,7 @@ export const seoMetadata: Route.MetaDescriptors = [
   },
   {
     name: "og:image",
+    // TODO: 👇 change image with my own real image in later commit after photo editing
     content:
       "https://media.licdn.com/dms/image/v2/D5616AQELC6MFvkAjbg/profile-displaybackgroundimage-shrink_350_1400/B56ZbYcfynGgAY-/0/1747388072255?e=1756339200&v=beta&t=EDbkD_TzxdVP9IfKHLD5Tm7uskck4MYSvoL0ZQVzB40",
   },
