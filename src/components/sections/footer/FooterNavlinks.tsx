@@ -6,7 +6,7 @@ export default function FooterNavlinks() {
   const { navlinks } = useJsonData<INavLinksData>("navlinks");
 
   return (
-    <ul className="flex items-center flex-wrap justify-center">
+    <ul className="flex items-center flex-wrap gap-y-3 sm:gap-0 justify-center">
       {navlinks?.map((link) => (
         <Link
           key={link.id}
