@@ -29,8 +29,7 @@ export const seoMetadata: Route.MetaDescriptors = [
   },
   {
     name: "og:image",
-    // TODO: 👇 change image with my own real image in later commit after photo editing
     content:
-      "https://media.licdn.com/dms/image/v2/D5616AQELC6MFvkAjbg/profile-displaybackgroundimage-shrink_350_1400/B56ZbYcfynGgAY-/0/1747388072255?e=1756339200&v=beta&t=EDbkD_TzxdVP9IfKHLD5Tm7uskck4MYSvoL0ZQVzB40",
+      "https://media.licdn.com/dms/image/v2/D5603AQG4oa0af6rLow/profile-displayphoto-crop_800_800/B56ZfBskjkHEAQ-/0/1751301377213?e=1756944000&v=beta&t=gStNBYYWAkILRjhKHABHMUHt6zmlDQsQmtaRucFeLFk",
   },
 ];
