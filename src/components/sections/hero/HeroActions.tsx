@@ -11,12 +11,13 @@ export default function HeroActions() {
       className="flex slide-in-blurred-top text-xs w-36 h-10 sm:text-xl sm:w-56 sm:h-14"
     >
       <a
-        href="/assets/Ikram_Hussain_Siaym_Resume.pdf"
-        download
+        href="https://ikramhussainsiyamresume2025.tiiny.site"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span ref={textRef}>Grab My Resume</span>
+        <span ref={textRef} className="pointer-events-none select-none">
+          Grab My Resume
+        </span>
       </a>
     </Button>
   );

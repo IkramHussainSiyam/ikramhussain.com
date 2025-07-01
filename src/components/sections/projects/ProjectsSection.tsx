@@ -33,8 +33,9 @@ export default function ProjectsSection() {
           />
           <ProjectCard
             projectLink="https://github.com/ikramhussainsiyam/the-chronicles"
-            title="The Chronicles - A Clean and Responsive Medium UI Clone"
-            description="A polished, beautiful, and responsive Medium UI clone built with React, Next.js, and Tailwind CSS."
+            title="The Chronicles - Full-stack writing platform"
+            description="A full-stack writing platform where users can read, write and share their stories with the world & connect with each other by following."
+            inProgress
           />
           <ProjectCard
             projectLink="https://github.com/ikramhussainsiyam/unified-glow-vscode-theme"

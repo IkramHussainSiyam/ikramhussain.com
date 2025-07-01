@@ -48,7 +48,9 @@ export default function Navbar() {
           <Logo />
           <NavbarSheet>
             <Button>
-              <span ref={textRef}>Menu</span>
+              <span ref={textRef} className="pointer-events-none select-none">
+                Menu
+              </span>
             </Button>
           </NavbarSheet>
         </nav>
