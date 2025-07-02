@@ -1,5 +1,5 @@
 .breathing-text {
-  -webkit-animation: breathing-text var(--dur, 5s) ease-in-out infinite
+  -webkit-animation: breathing-text var(--dur, 3s) ease-in-out infinite
     var(--wait, 0s);
   animation: breathing-text var(--dur, 3s) ease-in-out infinite var(--wait, 0s);
 }
@@ -11,7 +11,7 @@
   }
 
   50% {
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.12rem;
   }
 }
 

@@ -1,6 +1,6 @@
 export default function Slogan() {
   return (
-    <h3 className="text-2xl sm:text-5xl xl:text-6xl font-display italic text-primary capitalize fade-in-bck [--wait:0.7s]">
+    <h3 className="text-2xl sm:text-4xl xl:text-5xl font-semibold sm:font-medium capitalize fade-in-bck [--wait:0.7s]">
       frontend web developer
     </h3>
   );

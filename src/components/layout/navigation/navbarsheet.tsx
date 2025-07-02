@@ -21,7 +21,7 @@ export function NavbarSheet({ children }: { children: React.ReactNode }) {
           </SheetTitle>
           <SheetClose asChild>
             <Button size={"icon"} variant={"secondary"}>
-              <X size={16} strokeWidth={3} className="text-primary" />
+              <X size={16} strokeWidth={3} />
             </Button>
           </SheetClose>
         </div>
